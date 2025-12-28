@@ -1,0 +1,140 @@
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    /* Fondo general claro */
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-card {
+    position: relative;
+    width: 380px;
+    background-color: #B0BCC2;
+    /* Gris azulado de la referencia */
+    border-radius: 15px;
+    padding: 60px 30px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    /* Espacio para el avatar flotante */
+}
+
+.avatar-header {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #8C9EA7;
+    /* Gris un poco más oscuro */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #fff;
+    /* Borde blanco opcional o del mismo color del fondo */
+
+    mat-icon {
+        font-size: 60px;
+        height: 60px;
+        width: 60px;
+        color: white;
+    }
+}
+
+.login-title {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Custom Input Styles to match "Flat Box" look */
+.custom-input-group {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    /* Bordes rectos o muy poco redondeados según imagen */
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    height: 45px;
+}
+
+.input-icon {
+    color: #777;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.custom-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    color: #555;
+
+    &::placeholder {
+        color: #999;
+    }
+}
+
+/* Checkbox Style Override */
+::ng-deep .mat-mdc-checkbox .mdc-form-field {
+    color: white !important;
+    font-size: 13px;
+}
+
+::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,
+::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+    background-color: #8C9EA7 !important;
+    border-color: #8C9EA7 !important;
+}
+
+.options-row {
+    margin-bottom: 25px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    border-radius: 25px !important;
+    /* Pill shape */
+    padding: 22px !important;
+    font-size: 16px !important;
+    background-color: #2D9CDB !important;
+    /* Azul cyan similar a referencia */
+    color: white !important;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background-color: #2689c1 !important;
+    }
+}
+
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    }
+}
