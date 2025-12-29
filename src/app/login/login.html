@@ -2,15 +2,15 @@
     <div class="login-card">
         <div class="avatar-header">
             <div class="avatar-circle">
-                <mat-icon>person</mat-icon>
+                <mat-icon>{{ isLoginMode ? 'person' : 'person_add' }}</mat-icon>
             </div>
         </div>
 
         <div class="card-content">
-            <h2 class="login-title">LOGIN</h2>
+            <h2 class="login-title">{{ isLoginMode ? 'LOGIN' : 'SIGN UP' }}</h2>
 
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-
+            <!-- LOGIN FORM -->
+            <form *ngIf="isLoginMode" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="custom-input-group">
                     <mat-icon class="input-icon">person</mat-icon>
                     <input type="text" formControlName="username" placeholder="Username" class="custom-input">
@@ -25,14 +25,49 @@
                     <mat-checkbox formControlName="rememberMe" class="custom-checkbox">Remember me</mat-checkbox>
                 </div>
 
+                <div class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</div>
+
                 <div class="actions">
                     <button mat-flat-button color="primary" type="submit" [disabled]="loginForm.invalid">LOGIN</button>
                 </div>
+            </form>
 
-                <div class="footer-links">
-                    <a href="#">Forgot Username / Password?</a>
+            <!-- REGISTER FORM -->
+            <form *ngIf="!isLoginMode" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="custom-input-group">
+                    <mat-icon class="input-icon">person</mat-icon>
+                    <input type="text" formControlName="username" placeholder="Username" class="custom-input">
+                </div>
+
+                <div class="custom-input-group">
+                    <mat-icon class="input-icon">email</mat-icon>
+                    <input type="email" formControlName="email" placeholder="E-mail" class="custom-input">
+                </div>
+
+                <div class="custom-input-group">
+                    <mat-icon class="input-icon">lock</mat-icon>
+                    <input type="password" formControlName="password" placeholder="Password" class="custom-input">
+                </div>
+
+                <div class="custom-input-group">
+                    <mat-icon class="input-icon">lock</mat-icon>
+                    <input type="password" formControlName="confirmPassword" placeholder="Confirm Password"
+                        class="custom-input">
+                </div>
+
+                <div class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+                <div class="actions">
+                    <button mat-flat-button color="primary" type="submit" [disabled]="registerForm.invalid">CREATE
+                        ACCOUNT</button>
                 </div>
             </form>
+
+            <div class="footer-links">
+                <a href="javascript:void(0)" (click)="toggleMode()">
+                    {{ isLoginMode ? "Don't have an account? Sign up here" : "Already have an account? Login here" }}
+                </a>
+            </div>
         </div>
     </div>
 </div>

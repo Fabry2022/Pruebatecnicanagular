@@ -4,7 +4,6 @@
     align-items: center;
     height: 100vh;
     background-color: #f0f2f5;
-    /* Fondo general claro */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,12 +11,10 @@
     position: relative;
     width: 380px;
     background-color: #B0BCC2;
-    /* Gris azulado de la referencia */
     border-radius: 15px;
     padding: 60px 30px 40px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
-    /* Espacio para el avatar flotante */
 }
 
 .avatar-header {
@@ -33,13 +30,11 @@
     width: 100px;
     height: 100px;
     background-color: #8C9EA7;
-    /* Gris un poco más oscuro */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 5px solid #fff;
-    /* Borde blanco opcional o del mismo color del fondo */
 
     mat-icon {
         font-size: 60px;
@@ -58,13 +53,11 @@
     font-weight: 300;
 }
 
-/* Custom Input Styles to match "Flat Box" look */
 .custom-input-group {
     display: flex;
     align-items: center;
     background-color: white;
     border-radius: 4px;
-    /* Bordes rectos o muy poco redondeados según imagen */
     padding: 5px 10px;
     margin-bottom: 20px;
     height: 45px;
@@ -82,13 +75,13 @@
     flex: 1;
     font-size: 14px;
     color: #555;
+    width: 100%;
 
     &::placeholder {
         color: #999;
     }
 }
 
-/* Checkbox Style Override */
 ::ng-deep .mat-mdc-checkbox .mdc-form-field {
     color: white !important;
     font-size: 13px;
@@ -104,21 +97,24 @@
     margin-bottom: 25px;
 }
 
-/* Button */
 button {
     width: 100%;
     border-radius: 25px !important;
-    /* Pill shape */
     padding: 22px !important;
     font-size: 16px !important;
     background-color: #2D9CDB !important;
-    /* Azul cyan similar a referencia */
     color: white !important;
     letter-spacing: 1px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 
     &:hover {
         background-color: #2689c1 !important;
+    }
+
+    &:disabled {
+        background-color: #95a5a6 !important;
+        cursor: not-allowed;
     }
 }
 
@@ -131,10 +127,22 @@ button {
         text-decoration: none;
         font-size: 12px;
         opacity: 0.8;
+        cursor: pointer;
 
         &:hover {
             opacity: 1;
             text-decoration: underline;
         }
     }
+}
+
+.error-msg {
+    color: #e74c3c;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
 }

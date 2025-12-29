@@ -1,0 +1,27 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.dashboard-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+mat-card {
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.example-header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    mat-icon {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+    }
+}

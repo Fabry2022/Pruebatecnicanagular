@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "3982",
+      "username": "fabricio",
+      "email": "fabriciocastro002@gmail.com",
+      "password": "Libro"
+    },
+    {
+      "id": "cf04",
+      "username": "fabricio",
+      "email": "fabriciocastro002@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "633d",
+      "username": "fabricio",
+      "email": "fabriciocastro002@gmail.com",
+      "password": "12345678"
+    }
+  ]
+}

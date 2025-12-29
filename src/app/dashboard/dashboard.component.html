@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <span>Dashboard</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
+
+<div class="dashboard-container">
+    <mat-card>
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+                <mat-icon>account_circle</mat-icon>
+            </div>
+            <mat-card-title>Bienvenido, {{ user?.username }}!</mat-card-title>
+            <mat-card-subtitle>{{ user?.email }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Has iniciado sesión correctamente. Esta es tu área privada.</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="warn" (click)="logout()">Cerrar Sesión</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
