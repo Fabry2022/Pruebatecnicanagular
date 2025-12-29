@@ -1,59 +1,84 @@
 # Pruebatecnicanagular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+Este proyecto fue desarrollado utilizando **Angular 20** y generado con **Angular CLI 20.3.13**.  
+El objetivo del proyecto es evaluar habilidades de desarrollo Frontend empleando TypeScript, componentes, servicios y buenas prácticas en Angular.
 
-## Development server
+---
 
-To start a local development server, run:
+## ⚙️ Entorno de desarrollo
+
+- Angular CLI: **20.3.13**
+- Angular Framework: **20.3.15**
+- Node.js: **24.12.0**
+- NPM: **11.6.2**
+- TypeScript: **5.9.3**
+- RxJS: **7.8.1**
+- Zone.js: **0.15.1**
+
+Sistema operativo utilizado durante el desarrollo: **Windows 11 x64**
+
+---
+
+## 🚀 Servidor de desarrollo
+
+Para iniciar el servidor local, ejecuta:
 
 ```bash
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Luego abre en el navegador:
 
-## Code scaffolding
+http://localhost:4200   
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+La aplicación se recargará automáticamente al detectar cambios en el código.
+
+Generación de componentes (Code scaffolding)
+
+Para generar un nuevo componente:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ver todos los esquemas disponibles:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+🏗️ Compilar el proyecto
 
-To build the project run:
+Para compilar el proyecto, ejecuta:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Esto compilará tu proyecto y almacenará los artefactos de construcción en el directorio `dist/`. Por defecto, la compilación de producción optimiza tu aplicación para el rendimiento y la velocidad.
 
-## Running unit tests
+Los artefactos generados se almacenarán en la carpeta:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+```bash
+dist/
+```
+🧪 Ejecutar pruebas unitarias
+
+Para ejecutar pruebas unitarias, ejecuta:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+Pruebas end-to-end (E2E)
 
-For end-to-end (e2e) testing, run:
+Para ejecutar pruebas end-to-end, ejecuta:
 
 ```bash
 ng e2e
 ```
+Angular CLI no incluye un framework E2E por defecto, puedes integrar el de tu preferencia.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+📚 Recursos adicionales
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Consulta la documentación oficial del CLI en:
+https://angular.dev/tools/cli
